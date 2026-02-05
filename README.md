@@ -1,6 +1,4 @@
-# 📻 Radio Guamote – Digitalización de una radio rural
-
-## 🌱 Contexto del proyecto
+# 📻 Radio La Voz de Guamote 
 
 Radio Guamote es una radio rural de amplitud modulada (AM) que, como muchos medios tradicionales comunitarios, ha enfrentado una pérdida progresiva de audiencia debido a las limitaciones tecnológicas y a los cambios en los hábitos de consumo de información.
 
@@ -47,7 +45,6 @@ RadioGuamote/
 * Permite escuchar la radio desde cualquier lugar.
 * Interfaz pensada para ser sencilla y accesible.
 
-*(Tecnologías específicas del frontend pueden detallarse aquí)*
 
 ---
 
@@ -57,7 +54,6 @@ RadioGuamote/
 * Permite la conexión entre la app móvil y la transmisión digital.
 * Soporta la escalabilidad del sistema.
 
-*(Tecnologías específicas del backend pueden detallarse aquí)*
 
 ---
 
