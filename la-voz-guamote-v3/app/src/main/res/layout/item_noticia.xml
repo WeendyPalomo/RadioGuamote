@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:layout_margin="8dp" app:cardCornerRadius="12dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_noticia" android:layout_width="match_parent" android:layout_height="180dp"
+                android:scaleType="centerCrop"/>
+            <TextView android:id="@+id/badge_urgente" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_margin="8dp" android:background="@color/error" android:padding="4dp"
+                android:text="URGENTE" android:textColor="@color/white" android:textSize="10sp" android:visibility="gone"/>
+            <TextView android:id="@+id/badge_destacada" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="end" android:layout_margin="8dp" android:background="@color/warning"
+                android:padding="4dp" android:text="DESTACADA" android:textColor="@color/white"
+                android:textSize="10sp" android:visibility="gone"/>
+        </FrameLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="12dp">
+            <TextView android:id="@+id/tv_categoria" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip" android:paddingHorizontal="8dp" android:paddingVertical="4dp"
+                android:textColor="@color/white" android:textSize="10sp"/>
+            <TextView android:id="@+id/tv_titulo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:textSize="16sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_subtitulo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/tv_resumen" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:maxLines="3"/>
+            <TextView android:id="@+id/tv_autor_fecha" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:textColor="@color/text_hint" android:textSize="12sp"/>
+            <TextView android:id="@+id/tv_vistas" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="@color/text_hint" android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

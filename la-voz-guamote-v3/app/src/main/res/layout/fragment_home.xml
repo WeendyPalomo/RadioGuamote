@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/white">
+    
+    <LinearLayout 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+        
+        <!-- Título Inicio -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inicio"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+        
+        <!-- Logo grande de La Voz de Guamote (se carga desde URL) -->
+        <ImageView
+            android:id="@+id/iv_logo_grande"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/ic_logo_guamote"
+            android:scaleType="fitCenter"
+            android:contentDescription="Logo La Voz de Guamote"/>
+        
+        <!-- Nombre de la radio -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="— La voz de —"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"/>
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guamote"
+            android:textColor="@color/text_primary"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"/>
+        
+        <!-- Botón Play grande -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_play_pause"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_play"
+            app:backgroundTint="@color/primary"
+            app:fabCustomSize="72dp"
+            app:maxImageSize="36dp"
+            app:tint="@color/white"
+            android:contentDescription="Reproducir radio"/>
+        
+        <!-- Eslogan en Kichwa -->
+        <TextView
+            android:id="@+id/tv_eslogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Ayllukunapak Shimi"
+            android:textColor="@color/primary"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        
+        <!-- Redes Sociales -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            
+            <!-- Facebook -->
+            <ImageButton
+                android:id="@+id/btn_facebook"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_circle_facebook"
+                android:src="@drawable/ic_facebook"
+                android:padding="12dp"
+                app:tint="@color/white"
+                android:contentDescription="Facebook"/>
+            
+            <!-- TikTok -->
+            <ImageButton
+                android:id="@+id/btn_tiktok"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_circle_tiktok"
+                android:src="@drawable/ic_tiktok"
+                android:padding="12dp"
+                app:tint="@color/white"
+                android:contentDescription="TikTok"/>
+            
+            <!-- Instagram -->
+            <ImageButton
+                android:id="@+id/btn_instagram"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_circle_instagram"
+                android:src="@drawable/ic_instagram"
+                android:padding="12dp"
+                app:tint="@color/white"
+                android:contentDescription="Instagram"/>
+            
+            <!-- YouTube - CAMBIADO: ahora es solo el icono circular como los demás -->
+            <ImageButton
+                android:id="@+id/btn_youtube"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_circle_youtube"
+                android:src="@drawable/ic_youtube"
+                android:padding="12dp"
+                app:tint="@color/white"
+                android:contentDescription="YouTube"/>
+        </LinearLayout>
+        
+        <!-- Descripción de la radio -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="La Voz de Guamote, es un medio de comunicación de la Compañía de Jesús en el Ecuador. Fundada en 2002, por P. Julio Gortaire, S.J. y la Hermana Laura Melena, actualmente esta administrada por la Fundación Acción Integral Guamote."
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            android:textStyle="italic"/>
+            
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:id="@+id/nav_graph" 
+    app:startDestination="@id/homeFragment">
+    
+    <!-- Pantalla Inicio -->
+    <fragment 
+        android:id="@+id/homeFragment" 
+        android:name="ec.edu.puce.lavozguamote.ui.home.HomeFragment"
+        android:label="Inicio"/>
+    
+    <!-- Página Web -->
+    <fragment 
+        android:id="@+id/webFragment" 
+        android:name="ec.edu.puce.lavozguamote.ui.web.WebFragment"
+        android:label="Web"/>
+    
+    <!-- Anuncios (CORREGIDO: ahora usa AnunciosFragment) -->
+    <fragment 
+        android:id="@+id/anunciosFragment" 
+        android:name="ec.edu.puce.lavozguamote.ui.anuncios.AnunciosFragment"
+        android:label="Anuncios"/>
+    
+    <!-- Podcasts -->
+    <fragment 
+        android:id="@+id/podcastsFragment" 
+        android:name="ec.edu.puce.lavozguamote.ui.podcasts.PodcastsFragment"
+        android:label="Podcasts"/>
+    
+    <!-- Libros -->
+    <fragment 
+        android:id="@+id/booksFragment" 
+        android:name="ec.edu.puce.lavozguamote.ui.books.BooksFragment"
+        android:label="Libros"/>
+    
+    <!-- Contactos -->
+    <fragment 
+        android:id="@+id/contactosFragment" 
+        android:name="ec.edu.puce.lavozguamote.ui.contactos.ContactosFragment"
+        android:label="Contactos"/>
+    
+    <!-- Chatbot -->
+    <fragment 
+        android:id="@+id/chatbotFragment" 
+        android:name="ec.edu.puce.lavozguamote.ui.chatbot.ChatbotFragment"
+        android:label="Asistente"/>
+    
+    <!-- Redes Sociales -->
+    <fragment 
+        android:id="@+id/socialFragment" 
+        android:name="ec.edu.puce.lavozguamote.ui.social.SocialFragment"
+        android:label="Redes Sociales"/>
+    
+    <!-- Reportes -->
+    <fragment 
+        android:id="@+id/reportesFragment" 
+        android:name="ec.edu.puce.lavozguamote.ui.reportes.ReportesFragment"
+        android:label="Reportes"/>
+    
+    <!-- Perfil -->
+    <fragment 
+        android:id="@+id/profileFragment" 
+        android:name="ec.edu.puce.lavozguamote.ui.profile.ProfileFragment"
+        android:label="Perfil"/>
+
+    <!-- ===== ADMINISTRADOR ===== -->
+    
+    <!-- Panel Admin -->
+    <fragment
+        android:id="@+id/adminPanelFragment"
+        android:name="ec.edu.puce.lavozguamote.ui.admin.AdminPanelFragment"
+        android:label="Panel Admin">
+        <action
+            android:id="@+id/action_adminPanel_to_adminList"
+            app:destination="@id/adminListFragment"/>
+    </fragment>
+    
+    <!-- Lista Admin -->
+    <fragment
+        android:id="@+id/adminListFragment"
+        android:name="ec.edu.puce.lavozguamote.ui.admin.AdminListFragment"
+        android:label="Gestionar">
+        <argument
+            android:name="type"
+            app:argType="string"
+            android:defaultValue="anuncios"/>
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Gestionar"/>
+        <action
+            android:id="@+id/action_adminList_to_adminEdit"
+            app:destination="@id/adminEditFragment"/>
+    </fragment>
+    
+    <!-- Editar Admin -->
+    <fragment
+        android:id="@+id/adminEditFragment"
+        android:name="ec.edu.puce.lavozguamote.ui.admin.AdminEditFragment"
+        android:label="Editar">
+        <argument
+            android:name="type"
+            app:argType="string"
+            android:defaultValue="anuncios"/>
+        <argument
+            android:name="itemId"
+            app:argType="integer"
+            android:defaultValue="-1"/>
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Nuevo"/>
+    </fragment>
+
+    <!-- Activar Libro para Usuario -->
+    <fragment
+        android:id="@+id/adminActivateBookFragment"
+        android:name="ec.edu.puce.lavozguamote.ui.admin.AdminActivateBookFragment"
+        android:label="Activar Libro">
+        <argument
+            android:name="bookId"
+            app:argType="integer"
+            android:defaultValue="-1"/>
+        <argument
+            android:name="bookTitle"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="bookAuthor"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="bookImageUrl"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+    </fragment>
+
+</navigation>

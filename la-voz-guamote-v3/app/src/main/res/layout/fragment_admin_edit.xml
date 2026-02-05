@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@android:color/white"
+            app:titleTextColor="@android:color/white"
+            tools:title="Nuevo Anuncio" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Título -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTitulo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Título *"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:maxLines="2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Descripción -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDescripcion"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Descripción"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="3"
+                    android:gravity="top" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Sección de Imagen -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/imageSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:strokeColor="@color/divider"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Imagen"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="12dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/ivPreview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/placeholder_news"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tvNoImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Sin imagen seleccionada"
+                            android:textColor="@color/text_secondary" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSelectImage"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Seleccionar"
+                            app:icon="@drawable/ic_image"
+                            app:strokeColor="@color/primary" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRemoveImage"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Quitar"
+                            android:textColor="@color/error"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Enlace (solo para anuncios) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEnlace"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Enlace URL (opcional)"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary"
+                app:startIconDrawable="@drawable/ic_link">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEnlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Spotify URL (solo para podcasts) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSpotifyUrl"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="URL de Spotify *"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSpotifyUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Duración (solo para podcasts) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDuracion"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Duración (ej: 45:30)"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDuracion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Autor (solo para libros) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAutor"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Autor"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAutor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- PDF URL (solo para libros) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPdfUrl"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="URL del PDF"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPdfUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- OPCIÓN LIBRO GRATIS (solo para libros) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardLibroGratis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:strokeColor="#4CAF50"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/cbLibroGratis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#4CAF50" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Libro Gratuito"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_book"
+                            app:tint="#4CAF50" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="40dp"
+                        android:text="Al marcar esta opción, el libro estará disponible para TODOS los usuarios sin necesidad de activación individual."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Botón Guardar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Guardar"
+                android:textSize="16sp"
+                app:backgroundTint="@color/primary"
+                app:cornerRadius="12dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

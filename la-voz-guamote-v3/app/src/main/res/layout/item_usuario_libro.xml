@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <!-- Avatar -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_profile_placeholder"/>
+
+        <!-- Info Usuario -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre Completo"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email@ejemplo.com"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"/>
+
+            <TextView
+                android:id="@+id/tv_fecha_activacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activado: 01/01/2026"
+                android:textSize="11sp"
+                android:textColor="@color/text_hint"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- Botón Activar/Desactivar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_accion"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Activar"
+            android:textSize="12sp"
+            app:cornerRadius="18dp"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

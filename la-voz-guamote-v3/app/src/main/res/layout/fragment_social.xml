@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header con imagen -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_gradient_header"
+                android:contentDescription="Guamote" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_radio_logo"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="3dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="La Voz de Guamote"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="1520 AM - Ayllukunapak Shimi"
+                    android:textColor="@color/white_alpha_80"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Sección Historia de Guamote -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏔️ Historia de Guamote"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/primary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Guamote es un cantón ubicado en la provincia de Chimborazo, Ecuador. Su nombre proviene del kichwa y significa 'Tierra de la Totora'. Con una rica herencia cultural indígena, Guamote es conocido por su impresionante paisaje andino y su gente trabajadora."
+                    android:textColor="@color/text_secondary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="La famosa Feria de Guamote, celebrada cada jueves, es una de las ferias indígenas más grandes y auténticas del Ecuador, donde convergen comerciantes y visitantes de toda la sierra ecuatoriana."
+                    android:textColor="@color/text_secondary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="La Voz de Guamote nació en 1994 como un proyecto comunitario para dar voz a las comunidades kichwas de la región. Desde entonces, hemos sido el puente de comunicación entre las comunidades rurales, transmitiendo en español y kichwa para preservar nuestra lengua ancestral."
+                    android:textColor="@color/text_secondary"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_chat_bot_bubble"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍 Datos importantes"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="• Altitud: 3,050 metros sobre el nivel del mar\n• Población: ~45,000 habitantes\n• Idiomas: Español y Kichwa\n• Feria tradicional: Todos los jueves\n• Fundación de la radio: 1994"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:lineSpacingExtra="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Sección Redes Sociales -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📱 Síguenos en Redes Sociales"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Mantente conectado con nosotros"
+                    android:textColor="@color/text_hint"
+                    android:textSize="14sp" />
+
+                <!-- Botones de Redes Sociales -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- YouTube -->
+                    <LinearLayout
+                        android:id="@+id/btn_youtube"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        android:background="?attr/selectableItemBackground">
+
+                        <FrameLayout
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@drawable/bg_youtube">
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_youtube"
+                                app:tint="@color/white" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="YouTube"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Facebook -->
+                    <LinearLayout
+                        android:id="@+id/btn_facebook"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        android:background="?attr/selectableItemBackground">
+
+                        <FrameLayout
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@drawable/bg_facebook">
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_facebook"
+                                app:tint="@color/white" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Facebook"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- TikTok -->
+                    <LinearLayout
+                        android:id="@+id/btn_tiktok"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        android:background="?attr/selectableItemBackground">
+
+                        <FrameLayout
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@drawable/bg_tiktok">
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_tiktok"
+                                app:tint="@color/white" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="TikTok"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Instagram -->
+                    <LinearLayout
+                        android:id="@+id/btn_instagram"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        android:background="?attr/selectableItemBackground">
+
+                        <FrameLayout
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@drawable/bg_instagram">
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_instagram"
+                                app:tint="@color/white" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Instagram"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Información de contacto -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📻 Sintonízanos"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="1520 AM en todo el cantón Guamote\ny alrededores de Chimborazo"
+                    android:textColor="@color/white_alpha_80"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@color/white_alpha_20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Calle Principal y García Moreno\n📞 (03) 291-6000\n📱 WhatsApp: 0998-123-456"
+                    android:textColor="@color/white_alpha_80"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

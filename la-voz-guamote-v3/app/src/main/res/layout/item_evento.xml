@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:cardCornerRadius="0dp" app:cardElevation="0dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:padding="12dp">
+            <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/iv_avatar_encargado"
+                android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_profile_placeholder"/>
+            <TextView android:id="@+id/tv_nombre_encargado" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="12dp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_categoria" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip" android:paddingHorizontal="8dp" android:paddingVertical="4dp"
+                android:textColor="@color/white" android:textSize="10sp"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/iv_evento_imagen" android:layout_width="match_parent"
+            android:layout_height="300dp" android:scaleType="centerCrop"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:padding="12dp">
+            <ImageButton android:id="@+id/btn_like" android:layout_width="32dp" android:layout_height="32dp"
+                android:background="?selectableItemBackgroundBorderless" android:src="@drawable/ic_heart_outline"/>
+            <ImageButton android:id="@+id/btn_comment" android:layout_width="32dp" android:layout_height="32dp"
+                android:layout_marginStart="16dp" android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_comment"/>
+            <ImageButton android:id="@+id/btn_share" android:layout_width="32dp" android:layout_height="32dp"
+                android:layout_marginStart="16dp" android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_share"/>
+        </LinearLayout>
+        <TextView android:id="@+id/tv_likes_count" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp" android:textStyle="bold"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="12dp">
+            <TextView android:id="@+id/tv_titulo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textSize="16sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_fecha_hora" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/tv_direccion" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/tv_precio" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:textColor="@color/success"/>
+            <TextView android:id="@+id/tv_descripcion" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:maxLines="3"/>
+            <TextView android:id="@+id/tv_comentarios_count" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:textColor="@color/text_hint" android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

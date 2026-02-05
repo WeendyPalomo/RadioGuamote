@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!-- Layout Usuario Logueado -->
+        <LinearLayout
+            android:id="@+id/layout_logged_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_foto_perfil"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_profile_placeholder" />
+
+            <TextView
+                android:id="@+id/tv_nombre_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_email_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_editar_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/edit_profile" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_mis_libros"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_book"
+                android:text="@string/my_books" />
+
+            <!-- ELIMINADO: btn_mis_donaciones -->
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_notificaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/notifications" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cerrar_sesion"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/logout" />
+
+            <!-- Botón Administrador (solo visible para admins) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Panel de Administración"
+                android:icon="@drawable/ic_admin"
+                app:backgroundTint="@color/primary"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Layout Usuario No Logueado -->
+        <LinearLayout
+            android:id="@+id/layout_not_logged_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_profile_placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Inicia sesión para acceder a tu perfil"
+                android:textAlignment="center" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_iniciar_sesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/login" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_registrarse"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register" />
+
+        </LinearLayout>
+
+        <!-- Card Donaciones -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/donations_title"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/donations_description" />
+
+                <TextView
+                    android:id="@+id/tv_donacion_banco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_donacion_nombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_donacion_ruc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_donacion_cuenta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_donacion_telefono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_donacion_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!-- Botones de acción -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_whatsapp_donacion"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_circle_whatsapp"
+                        android:src="@drawable/ic_whatsapp"
+                        android:padding="12dp"
+                        app:tint="@color/white"
+                        android:contentDescription="WhatsApp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_email_donacion"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_circle_email"
+                        android:src="@drawable/ic_email"
+                        android:padding="12dp"
+                        app:tint="@color/white"
+                        android:contentDescription="Email" />
+
+                    <ImageButton
+                        android:id="@+id/btn_llamar_donacion"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_circle_phone"
+                        android:src="@drawable/ic_phone"
+                        android:padding="12dp"
+                        app:tint="@color/white"
+                        android:contentDescription="Llamar" />
+
+                    <ImageButton
+                        android:id="@+id/btn_copiar_cuenta"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_circle_copy"
+                        android:src="@drawable/ic_copy"
+                        android:padding="12dp"
+                        app:tint="@color/white"
+                        android:contentDescription="Copiar cuenta" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ========================================== -->
+        <!-- SECCIÓN IDENTIDAD INSTITUCIONAL -->
+        <!-- ========================================== -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/primary"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Identidad Institucional"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary" />
+
+                <!-- Logo PUCE -->
+                <ImageView
+                    android:id="@+id/iv_logo_puce"
+                    android:layout_width="260dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Logo PUCE" />
+
+                <!-- Autores -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Autores:"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Gustavo Yanez, Wendy Palomo y Joshua Marcillo"
+                    android:textColor="@color/text_secondary" />
+
+                <!-- Tutor -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Tutor:"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Ing. Francisco Rodríguez"
+                    android:textColor="@color/text_secondary" />
+
+                <!-- Fuente de Financiamiento -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Fuente de Financiamiento:"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Este proyecto ha sido desarrollado con el apoyo y fondos del Programa de Aprendizaje Servicio 2025-02 de la Pontificia Universidad Católica del Ecuador."
+                    android:textColor="@color/text_secondary"
+                    android:lineSpacingMultiplier="1.2" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ========================================== -->
+        <!-- SECCIÓN DISCLAIMERS -->
+        <!-- ========================================== -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFF8E1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Título Disclaimers -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descargos de Responsabilidad"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#E65100" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="#FFE0B2" />
+
+                <!-- Disclaimer 1: Responsabilidad Académica -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Responsabilidad Académica"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:textColor="#BF360C" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Esta aplicación es el resultado de un proyecto académico de vinculación con la comunidad. Se entrega bajo la modalidad 'as-is' (tal cual) con fines de servicio social. La PUCE y los desarrolladores no asumen responsabilidad contractual por soporte comercial a largo plazo ni por fallos derivados de actualizaciones externas de hardware o software."
+                    android:textColor="#5D4037"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="1.3" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="#FFE0B2" />
+
+                <!-- Disclaimer 2: Uso de IA -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. Uso de Inteligencia Artificial"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:textColor="#BF360C" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Este sistema integra módulos de Inteligencia Artificial (IA) para el asistente virtual (chatbot). Los usuarios deben ser conscientes de que la IA puede generar errores o interpretaciones inexactas. La responsabilidad final sobre la toma de decisiones basada en esta información recae en el usuario humano."
+                    android:textColor="#5D4037"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="1.3" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

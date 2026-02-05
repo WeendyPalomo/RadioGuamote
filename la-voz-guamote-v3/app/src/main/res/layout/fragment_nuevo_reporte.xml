@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Tipo de reporte -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de reporte"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDenuncia"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🚨 Denuncia" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipSaludo"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💚 Saludo" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAviso"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="📢 Aviso" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipEmergencia"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🆘 Emergencia" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <!-- Título -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTitulo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/report_field_title"
+            app:boxStrokeColor="@color/primary"
+            app:hintTextColor="@color/primary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:maxLength="100" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Descripción -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDescripcion"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/report_field_description"
+            app:boxStrokeColor="@color/primary"
+            app:counterEnabled="true"
+            app:counterMaxLength="1000"
+            app:hintTextColor="@color/primary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="1000"
+                android:minLines="4" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Ubicación -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUbicacion"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/report_field_location"
+            app:boxStrokeColor="@color/primary"
+            app:endIconDrawable="@drawable/ic_location"
+            app:endIconMode="custom"
+            app:hintTextColor="@color/primary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnUseGps"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/report_use_gps"
+            android:textColor="@color/primary" />
+
+        <!-- Adjuntos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Adjuntos (opcional)"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardAddPhoto"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_camera"
+                        app:tint="@color/text_hint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/report_add_photo"
+                        android:textColor="@color/text_hint"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardAddAudio"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_mic"
+                        app:tint="@color/text_hint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/report_add_audio"
+                        android:textColor="@color/text_hint"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Switch anónimo -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchAnonimo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/report_anonymous"
+            android:textColor="@color/text_primary" />
+
+        <!-- Botón enviar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/report_send"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_send"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

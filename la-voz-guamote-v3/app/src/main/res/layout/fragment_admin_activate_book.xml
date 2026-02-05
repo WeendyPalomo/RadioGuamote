@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            app:title="Activar Libro"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Info del libro -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/iv_libro_portada"
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder_book"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_libro_titulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Título del Libro"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary"/>
+
+                        <TextView
+                            android:id="@+id/tv_libro_autor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Autor"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Buscar usuario -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buscar Usuario"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_buscar_usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_profile"
+                app:endIconMode="clear_text"
+                android:hint="Nombre, apellido o email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_buscar_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:imeOptions="actionSearch"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Progress de búsqueda -->
+            <ProgressBar
+                android:id="@+id/progress_busqueda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <!-- Lista de usuarios encontrados -->
+            <TextView
+                android:id="@+id/tv_resultados_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Resultados de búsqueda"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_usuarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"/>
+
+            <!-- Estado vacío -->
+            <LinearLayout
+                android:id="@+id/empty_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_profile"
+                    app:tint="@color/text_hint"/>
+
+                <TextView
+                    android:id="@+id/tv_empty_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Busca un usuario por nombre o email"
+                    android:textColor="@color/text_hint"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="24dp"
+                android:background="@color/divider"/>
+
+            <!-- Usuarios con libro activado -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuarios con este libro activado"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp"/>
+
+            <ProgressBar
+                android:id="@+id/progress_activados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_usuarios_activados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+            <TextView
+                android:id="@+id/tv_no_activados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ningún usuario tiene este libro activado"
+                android:textColor="@color/text_hint"
+                android:textAlignment="center"
+                android:padding="16dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

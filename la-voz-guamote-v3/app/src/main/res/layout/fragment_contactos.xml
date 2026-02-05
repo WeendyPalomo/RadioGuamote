@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Título CONTACTOS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONTACTOS"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Subtítulo visítanos -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="visítanos"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Ubicación -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estamos ubicados en\nSanta Cruz de Guamote"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Card del Mapa -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_mapa"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/iv_mapa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_mapa"
+                android:contentDescription="Mapa de ubicación"/>
+
+            <!-- Overlay para indicar que es clickeable -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#80000000"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Ver en Google Maps"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Título Contactos -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contactos"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Email -->
+        <LinearLayout
+            android:id="@+id/layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail:  "
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lavozdeguamote@faig.ec"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <!-- Celular -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Celular:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/layout_celular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv_celular1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0989432206"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" / "
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_celular2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0991280714"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Botones de acción -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <!-- Botón WhatsApp -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_whatsapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="WhatsApp"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_whatsapp"
+                app:iconTint="@color/white"
+                app:backgroundTint="#25D366"
+                app:cornerRadius="24dp"/>
+
+            <!-- Botón Llamar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_llamar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Llamar"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_phone"
+                app:iconTint="@color/white"
+                app:backgroundTint="@color/primary"
+                app:cornerRadius="24dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

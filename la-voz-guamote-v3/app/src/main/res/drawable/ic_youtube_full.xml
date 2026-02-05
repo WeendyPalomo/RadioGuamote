@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="40dp"
+    android:viewportWidth="80"
+    android:viewportHeight="40">
+    
+    <!-- Fondo rojo redondeado del icono -->
+    <path
+        android:pathData="M8,10 h10 q4,0 4,4 v12 q0,4 -4,4 h-10 q-4,0 -4,-4 v-12 q0,-4 4,-4"
+        android:fillColor="#FF0000"/>
+    
+    <!-- Triángulo play blanco -->
+    <path
+        android:pathData="M10,14 l8,6 l-8,6 z"
+        android:fillColor="#FFFFFF"/>
+    
+    <!-- Texto YouTube -->
+    <path
+        android:pathData="M26,16 l2,8 l2,-8 h2 l-3,10 h-2 l-3,-10 z"
+        android:fillColor="#000000"/>
+    
+    <path
+        android:pathData="M34,19 q0,-3 3,-3 q3,0 3,3 v4 q0,3 -3,3 q-3,0 -3,-3 z M36,19 v4 q0,1 1,1 q1,0 1,-1 v-4 q0,-1 -1,-1 q-1,0 -1,1 z"
+        android:fillColor="#000000"/>
+    
+    <path
+        android:pathData="M42,22 v-6 h2 v6 q0,1 1,1 q1,0 1,-1 v-6 h2 v6 q0,3 -3,3 q-3,0 -3,-3 z"
+        android:fillColor="#000000"/>
+    
+    <path
+        android:pathData="M52,18 h-2 v-2 h6 v2 h-2 v8 h-2 z"
+        android:fillColor="#000000"/>
+    
+    <path
+        android:pathData="M58,22 v-6 h2 v6 q0,1 1,1 q1,0 1,-1 v-6 h2 v6 q0,3 -3,3 q-3,0 -3,-3 z"
+        android:fillColor="#000000"/>
+    
+    <path
+        android:pathData="M66,16 v10 h-2 v-10 h2 v3 q1,-3 3,-3 v2 q-2,0 -2,2 v6 h-1 z"
+        android:fillColor="#000000"/>
+    
+    <path
+        android:pathData="M72,19 q0,-3 2.5,-3 q2.5,0 2.5,3 v1 h-3 v3 q0,1 0.5,1 h2 v2 h-2 q-2.5,0 -2.5,-3 z M74,18 v2 h1 v-2 q0,-1 -0.5,-1 q-0.5,0 -0.5,1 z"
+        android:fillColor="#000000"/>
+</vector>

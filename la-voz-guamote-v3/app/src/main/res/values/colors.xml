@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores Principales - Paleta Cálida v2.0 -->
+    <color name="primary">#D2691E</color>
+    <color name="primary_dark">#8B4513</color>
+    <color name="primary_light">#F4A460</color>
+    <color name="primary_variant">#CD853F</color>
+    <color name="secondary">#A0522D</color>
+    <color name="secondary_dark">#6B4423</color>
+    <color name="secondary_light">#DEB887</color>
+    
+    <!-- Fondos -->
+    <color name="background">#FFF8F0</color>
+    <color name="background_dark">#1C1410</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F5E6D3</color>
+    <color name="card_background">#FFFAF5</color>
+    <color name="splash_background">#D2691E</color>
+    
+    <!-- Textos -->
+    <color name="text_primary">#3E2723</color>
+    <color name="text_secondary">#5D4037</color>
+    <color name="text_hint">#8D6E63</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_secondary">#FFFFFF</color>
+    
+    <!-- Estados -->
+    <color name="success">#2E7D32</color>
+    <color name="error">#C62828</color>
+    <color name="warning">#F9A825</color>
+    <color name="info">#0277BD</color>
+    
+    <!-- Básicos -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white_alpha_80">#CCFFFFFF</color>
+    <color name="white_alpha_60">#99FFFFFF</color>
+    <color name="white_alpha_20">#33FFFFFF</color>
+    <color name="black_alpha_50">#80000000</color>
+    
+    <!-- Acento -->
+    <color name="accent">#FF8C00</color>
+    <color name="accent_light">#FFB347</color>
+    <color name="rating_star">#FFC107</color>
+    
+    <!-- Radio Player -->
+    <color name="radio_live">#E53935</color>
+    <color name="radio_player_bg">#3E2723</color>
+    <color name="radio_progress">#FF8C00</color>
+    
+    <!-- Reportes Ciudadanos -->
+    <color name="report_denuncia">#D32F2F</color>
+    <color name="report_saludo">#388E3C</color>
+    <color name="report_aviso">#1976D2</color>
+    <color name="report_emergencia">#F57C00</color>
+    
+    <!-- Chatbot -->
+    <color name="chat_user_bubble">#D2691E</color>
+    <color name="chat_bot_bubble">#F5E6D3</color>
+    <color name="chat_user_text">#FFFFFF</color>
+    <color name="chat_bot_text">#3E2723</color>
+    
+    <!-- Navegación -->
+    <color name="nav_selected">#D2691E</color>
+    <color name="nav_unselected">#8D6E63</color>
+    <color name="nav_background">#FFFFFF</color>
+    
+    <!-- Otros -->
+    <color name="divider">#E0D5C8</color>
+    <color name="border">#D7CCC8</color>
+    <color name="ripple">#40D2691E</color>
+    <color name="chip_selected">#D2691E</color>
+    <color name="chip_unselected">#F5E6D3</color>
+    <color name="spotify_green">#1DB954</color>
+    <color name="whatsapp_green">#25D366</color>
+</resources>

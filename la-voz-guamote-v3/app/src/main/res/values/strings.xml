@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">La Voz de Guamote</string>
+    <string name="app_slogan">La voz del pueblo kichwa</string>
+    <string name="by_puce">By PUCE</string>
+    <string name="puce_full">Pontificia Universidad Católica del Ecuador</string>
+    
+    <!-- Navegación -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_events">Eventos</string>
+    <string name="nav_news">Noticias</string>
+    <string name="nav_podcasts">Podcasts</string>
+    <string name="nav_books">Libros</string>
+    <string name="nav_profile">Perfil</string>
+    <string name="nav_chat">Asistente</string>
+    <string name="nav_report">Reportar</string>
+    <string name="nav_donate">Donar</string>
+    <string name="nav_settings">Configuración</string>
+    
+    <!-- Radio -->
+    <string name="radio_playing">Reproduciendo en vivo</string>
+    <string name="radio_stopped">Toca para escuchar</string>
+    <string name="radio_title">Radio en Vivo</string>
+    <string name="radio_live">EN VIVO</string>
+    <string name="radio_offline">Sin conexión</string>
+    <string name="radio_program">Programa actual</string>
+    <string name="radio_host">Locutor</string>
+    <string name="radio_play">Reproducir</string>
+    <string name="radio_pause">Pausar</string>
+    <string name="radio_stop">Detener</string>
+    <string name="radio_loading">Conectando…</string>
+    <string name="radio_frequency">1520 AM</string>
+    <string name="radio_next_program">Próximo programa</string>
+    
+    <!-- Contenido vacío -->
+    <string name="latest_news">Últimas Noticias</string>
+    <string name="see_all">Ver todas</string>
+    <string name="empty_events">No hay eventos disponibles</string>
+    <string name="empty_news">No hay noticias disponibles</string>
+    <string name="empty_books">No hay libros disponibles</string>
+    <string name="empty_list">No hay elementos</string>
+    
+    <!-- Auth -->
+    <string name="login">Iniciar sesión</string>
+    <string name="register">Registrarse</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="edit_profile">Editar perfil</string>
+    <string name="my_books">Mis libros</string>
+    <string name="my_donations">Mis donaciones</string>
+    <string name="notifications">Notificaciones</string>
+    
+    <!-- Donaciones -->
+    <string name="donations_title">Apoya a La Voz de Guamote</string>
+    <string name="donations_description">Tu donación nos ayuda a seguir informando</string>
+    
+    <!-- Chatbot -->
+    <string name="chat_title">Asistente Comunitario</string>
+    <string name="chat_subtitle">¿En qué puedo ayudarte?</string>
+    <string name="chat_placeholder">Escribe tu pregunta…</string>
+    <string name="chat_voice_hint">Mantén presionado para hablar</string>
+    <string name="chat_listening">Escuchando…</string>
+    <string name="chat_thinking">Pensando…</string>
+    <string name="chat_welcome">¡Hola! Soy el Asistente Comunitario de La Voz de Guamote. Puedo ayudarte con información sobre la radio, programación, turismo y servicios locales.</string>
+    <string name="chat_error">Lo siento, hubo un error. Intenta de nuevo.</string>
+    <string name="chat_feedback_thanks">¡Gracias por tu opinión!</string>
+    <string name="chat_was_helpful">¿Te fue útil esta respuesta?</string>
+    
+    <!-- Reportes Ciudadanos -->
+    <string name="report_title">Periodismo Ciudadano</string>
+    <string name="report_subtitle">Comparte información con tu comunidad</string>
+    <string name="report_new">Nuevo Reporte</string>
+    <string name="report_my_reports">Mis Reportes</string>
+    <string name="report_type_complaint">Denuncia</string>
+    <string name="report_type_greeting">Saludo</string>
+    <string name="report_type_notice">Aviso</string>
+    <string name="report_type_emergency">Emergencia</string>
+    <string name="report_field_title">Título del reporte</string>
+    <string name="report_field_description">Descripción</string>
+    <string name="report_field_location">Ubicación</string>
+    <string name="report_use_gps">Usar mi ubicación actual</string>
+    <string name="report_add_photo">Agregar foto</string>
+    <string name="report_add_audio">Grabar audio</string>
+    <string name="report_send">Enviar Reporte</string>
+    <string name="report_anonymous">Enviar anónimamente</string>
+    <string name="report_success">¡Reporte enviado correctamente!</string>
+    <string name="report_error">Error al enviar el reporte</string>
+    <string name="report_status_pending">Pendiente</string>
+    <string name="report_status_reviewing">En revisión</string>
+    <string name="report_status_published">Publicado</string>
+    <string name="report_status_rejected">Rechazado</string>
+    
+    <!-- Idiomas -->
+    <string name="lang_spanish">Español</string>
+    <string name="lang_kichwa">Kichwa</string>
+    <string name="lang_english">English</string>
+    <string name="select_language">Seleccionar idioma</string>
+    
+    <!-- General -->
+    <string name="loading">Cargando…</string>
+    <string name="error">Error</string>
+    <string name="success">Éxito</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Guardar</string>
+    <string name="send">Enviar</string>
+    <string name="share">Compartir</string>
+    <string name="search">Buscar</string>
+    <string name="retry">Reintentar</string>
+    <string name="close">Cerrar</string>
+    <string name="back">Atrás</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="ok">Aceptar</string>
+    <string name="no_internet">Sin conexión a internet</string>
+</resources>

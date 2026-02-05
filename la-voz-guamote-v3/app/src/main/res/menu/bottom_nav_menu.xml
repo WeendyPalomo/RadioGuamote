@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment" android:icon="@drawable/ic_home" android:title="Inicio"/>
+    <item android:id="@+id/webFragment" android:icon="@drawable/ic_web" android:title="Web"/>
+    <item android:id="@+id/anunciosFragment" android:icon="@drawable/ic_event" android:title="Anuncios"/>
+    <item android:id="@+id/podcastsFragment" android:icon="@drawable/ic_podcast" android:title="Podcasts"/>
+    <item android:id="@+id/booksFragment" android:icon="@drawable/ic_book" android:title="Libros"/>
+</menu>

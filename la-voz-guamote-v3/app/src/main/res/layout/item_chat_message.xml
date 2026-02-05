@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="4dp">
+
+    <!-- Mensaje del usuario (derecha) -->
+    <LinearLayout
+        android:id="@+id/layoutUserMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:maxWidth="280dp"
+        android:background="@drawable/bg_chat_user_bubble"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvUserMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:text="¿A qué hora es el noticiero?" />
+
+        <TextView
+            android:id="@+id/tvUserTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white_alpha_80"
+            android:textSize="11sp"
+            tools:text="10:30 AM" />
+    </LinearLayout>
+
+    <!-- Mensaje del bot (izquierda) -->
+    <LinearLayout
+        android:id="@+id/layoutBotMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:maxWidth="280dp"
+        android:background="@drawable/bg_chat_bot_bubble"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvBotMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            tools:text="El noticiero comienza a las 7:00 AM de lunes a viernes." />
+
+        <TextView
+            android:id="@+id/tvBotTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text_hint"
+            android:textSize="11sp"
+            tools:text="10:30 AM" />
+    </LinearLayout>
+
+</FrameLayout>

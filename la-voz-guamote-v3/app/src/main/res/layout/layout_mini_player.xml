@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/miniPlayerCard"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/radio_player_bg"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp">
+
+        <!-- Icono de radio -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp">
+
+            <ImageView
+                android:id="@+id/ivRadioIcon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_circle_accent"
+                android:padding="10dp"
+                android:src="@drawable/ic_radio_tower" />
+
+            <!-- Punto rojo EN VIVO -->
+            <View
+                android:id="@+id/viewLiveIndicator"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="top|end"
+                android:background="@drawable/bg_live_dot" />
+        </FrameLayout>
+
+        <!-- Info del programa -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvProgramName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Noticiero La Voz" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvLiveLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_live_badge"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="1dp"
+                    android:text="1520 AM"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvHostName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/white_alpha_80"
+                    android:textSize="12sp"
+                    tools:text="Carlos Morocho" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Controles -->
+        <ImageButton
+            android:id="@+id/btnPlayPause"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/radio_play"
+            android:padding="8dp"
+            android:src="@drawable/ic_play_circle" />
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/close"
+            android:padding="8dp"
+            android:src="@drawable/ic_close" />
+    </LinearLayout>
+
+    <!-- Barra de progreso -->
+    <ProgressBar
+        android:id="@+id/progressStreaming"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="top"
+        android:indeterminate="true"
+        android:progressTint="@color/radio_progress"
+        android:visibility="gone" />
+
+</androidx.cardview.widget.CardView>

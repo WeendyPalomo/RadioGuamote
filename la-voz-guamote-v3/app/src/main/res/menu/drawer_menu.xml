@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/ic_home"
+            android:title="Inicio" />
+
+        <item
+            android:id="@+id/webFragment"
+            android:icon="@drawable/ic_web"
+            android:title="Web" />
+
+        <item
+            android:id="@+id/anunciosFragment"
+            android:icon="@drawable/ic_event"
+            android:title="Anuncios" />
+
+        <item
+            android:id="@+id/podcastsFragment"
+            android:icon="@drawable/ic_podcast"
+            android:title="Podcasts" />
+
+        <item
+            android:id="@+id/booksFragment"
+            android:icon="@drawable/ic_book"
+            android:title="Libros" />
+    </group>
+
+    <item android:title="Más opciones">
+        <menu>
+            <item
+                android:id="@+id/contactosFragment"
+                android:icon="@drawable/ic_phone"
+                android:title="Contactos" />
+
+            <item
+                android:id="@+id/chatbotFragment"
+                android:icon="@drawable/ic_chat_bot"
+                android:title="Asistente" />
+
+            <item
+                android:id="@+id/socialFragment"
+                android:icon="@drawable/ic_share"
+                android:title="Redes Sociales" />
+        </menu>
+    </item>
+
+    <item android:title="Cuenta">
+        <menu>
+            <item
+                android:id="@+id/profileFragment"
+                android:icon="@drawable/ic_profile"
+                android:title="Perfil" />
+
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="Configuración" />
+        </menu>
+    </item>
+
+</menu>
